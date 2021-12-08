@@ -1,0 +1,36 @@
+body {
+  max-width: 100%;
+}
+.conteiner {
+  position: relative;
+}
+/* заголовок */
+.conteiner__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  vertical-align: middle;
+  border: 5px solid orange;
+}
+.conteiner__head img {
+  margin: 1rem 1rem;
+  height: 8rem;
+}
+.conteiner__head-logo {
+  display: inline-block;
+}
+.conteiner__head-link {
+  margin: 3rem 3rem 0 3rem;
+  display: inline-block;
+}
+/* основной контейнер */
+.conteiner__content {
+  height: 100vh;
+  background-color: orange;
+  border: 5px solid gray;
+}
+.footer {
+  background-color: gray;
+  color: rgb(255, 255, 255);
+  height: 5rem;
+}
