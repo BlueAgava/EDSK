@@ -1,0 +1,26 @@
+body {
+  max-width: 1920px;
+  min-height: 100vh;
+}
+.container {
+  display: flex;
+  border: 2px solid brown;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.container__table-heading {
+  display: block;
+
+  font-size: 1.5rem;
+  color: brown;
+  width: 100%;
+}
+.container__table {
+  width: 100%;
+}
+.container__table th {
+  border: 1px solid rgb(0, 0, 0);
+}
+.container__table-body td {
+  border: 1px solid rgb(0, 0, 0);
+}

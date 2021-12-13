@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Review table</title>
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <script defer src="./js/table.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="container__table-heading">отзывы</div>
+
+      <table class="container__table">
+        <colgroup>
+          <col style="width: 10%" />
+          <col style="width: 30%" />
+          <col style="width: 30%" />
+          <col style="width: 30%" />
+        </colgroup>
+        <thead class="container__table-head">
+          <tr class="container__table-headtrow">
+            <th>
+              <div>столбец 1</div>
+            </th>
+            <th>
+              <div>столбец 2</div>
+            </th>
+            <th>
+              <div>столбец 3</div>
+            </th>
+            <th>
+              <div>столбец 4</div>
+            </th>
+          </tr>
+        </thead>
+        <!-- tbody реализован в js -->
+        <tbody id="table-body" class="container__table-body"></tbody>
+
+        <tfoot class="container__table-footer"></tfoot>
+      </table>
+    </div>
+  </body>
+</html>
