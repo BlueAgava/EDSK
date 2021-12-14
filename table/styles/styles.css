@@ -7,13 +7,51 @@ body {
   border: 2px solid brown;
   align-items: center;
   flex-wrap: wrap;
+  justify-content: center;
 }
+/* форма ввода */
+.container__form-heading {
+  text-align: center;
+  display: block;
+  width: 100%;
+  font-size: 1.5rem;
+  color: brown;
+  margin-top: 4rem;
+}
+.container__form-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 30rem;
+  height: 20rem;
+  background-color: rgb(66, 66, 66);
+  color: white;
+  border-radius: 5px;
+}
+.container__form-input {
+  display: block;
+  justify-content: center;
+}
+.container__form-submit {
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 10rem;
+}
+.container__form-content textarea {
+  display: block;
+  width: 22rem;
+  height: 10rem;
+}
+/* таблица вывода */
 .container__table-heading {
   display: block;
-
   font-size: 1.5rem;
   color: brown;
   width: 100%;
+  text-align: center;
+  margin-top: 4rem;
 }
 .container__table {
   width: 100%;

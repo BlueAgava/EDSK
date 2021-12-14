@@ -1,84 +1,76 @@
-const films = [
+const humans = [
     {
-      id: "1",
-      time: "10:00",
+      data: "10.12.2021",
+      text: "это было супер",
       name: "Человек-паук",
       genres: ["Фантастика", "боевик", "приключения"],
     },
     {
-      id: "2",
-      time: "12:00",
-      rate: "R",
-      name: "Собачья жизнь 2",
+      data: "11.12.2021",
+      text: "это было супер",
+      name: "Петя Иванов",
       genres: ["фентези", "драмма", "комедия"],
     },
     {
-      id: "3",
-      time: "14:00",
-      rate: "G",
-      name: "История игрушек 4",
+      data: "13.12.2021",
+      text: "мне не понравилось, было мало мяса",
+      name: "Чужой",
       genres: ["Мультфильмы", "фентези", "комедия"],
     },
     {
-      id: "10",
-      time: "16:00",
-      rate: "NC-17",
-      name: "Люди в черном: Интернешнл",
+      data: "13.12.2021",
+      text: "это были они",
+      name: "Люди в черном",
       genres: ["Фантастика", "боевик", "комедия"],
     },
     {
-      id: "20",
-      time: "18.00",
+      data: "14.12.2021",
+      text: "это было супер",
       name: "Человек-паук",
       genres: ["Фантастика", "боевик", "приключения"],
     },
     {
-      id: "30",
-      time: "20:00",
-      rate: "R",
-      name: "Собачья жизнь 2",
+      data: "15.12.2021",
+      text: "это было супер",
+      name: "Василий Иванович",
       genres: ["фентези", "драмма", "комедия"],
     },
     {
-      id: "31",
-      time: "22:00",
-      rate: "G",
-      name: "История игрушек 4",
+      data: "16 декабря 2021",
+      text: "это было супер",
+      name: "Петрович",
       genres: ["Мультфильмы", "фентези", "комедия"],
     }
   ];
+
   class FilmHelper {
-    constructor(film) {
-      this.film = film;
+    constructor(human) {
+      this.human = human;
     }
-    getId() {
-      return this.film.id ;
+    getData() {
+      return this.human.data ;
     }
-    getTitle() {
-      return this.film.name;
+    getName() {
+      return this.human.name;
     }
-    getTime() {
-      return this.film.time;
-    }
-    getGeneres() {
-      return this.film.genres.join(", ");
+    getText() {
+      return this.human.text;
     }
   }
+  
   let tbody = document.getElementById("table-body");
   tbody.innerHTML = "";
-  function renderFilmTableItem(film) {
-    const filmHelper = new FilmHelper(film);
+// вывод в таблицу 
+  function renderFilmTableItem(human) {
+    const filmHelper = new FilmHelper(human);
     return `
     <tr>
-          <td>${filmHelper.getId()}</td>
-          <td>${filmHelper.getTime()}</td>
-          <td>${filmHelper.getTitle()}</td>
-          <td>${filmHelper.getGeneres()}</td>
+          <td>${filmHelper.getData()}</td>
+          <td>${filmHelper.getName()}</td>
+          <td>${filmHelper.getText()}</td>       
     </tr> `;
   }
   // вывод информации из массива
-  for (const film of films) {
-    
-      tbody.innerHTML += renderFilmTableItem(film);
-    
+  for (const human of humans) {
+      tbody.innerHTML += renderFilmTableItem(human);   
   }

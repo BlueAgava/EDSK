@@ -10,28 +10,48 @@
   </head>
   <body>
     <div class="container">
-      <div class="container__table-heading">отзывы</div>
+      <div class="container__form-heading">заполните форму отзыва</div>
+      <form class="container__form-content">
+        <input
+          class="container__form-input"
+          type="text"
+          required
+          placeholder="введите полное имя"
+          name="inputed text"
+        />
 
+        <textarea
+          class="container__form-textarea"
+          id="#"
+          placeholder="введите сюда свой отзыв"
+          name="review"
+        ></textarea>
+
+        <div class="container__form-checkbox">
+          <input type="checkbox" id="checkbox" name="checkbox" />
+          <label for="checkbox"
+            >Я согласен на обработку своих персональных данных</label
+          >
+        </div>
+        <button class="container__form-submit" type="submit">отправить</button>
+      </form>
+      <div class="container__table-heading">отзывы</div>
       <table class="container__table">
         <colgroup>
-          <col style="width: 10%" />
+          <col style="width: 15%" />
           <col style="width: 30%" />
-          <col style="width: 30%" />
-          <col style="width: 30%" />
+          <col style="width: 55%" />
         </colgroup>
         <thead class="container__table-head">
           <tr class="container__table-headtrow">
             <th>
-              <div>столбец 1</div>
+              <div>дата</div>
             </th>
             <th>
-              <div>столбец 2</div>
+              <div>Имя</div>
             </th>
             <th>
-              <div>столбец 3</div>
-            </th>
-            <th>
-              <div>столбец 4</div>
+              <div>содержимое</div>
             </th>
           </tr>
         </thead>
