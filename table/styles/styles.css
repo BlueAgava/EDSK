@@ -1,8 +1,15 @@
+@font-face {
+  font-family: "IBM Plex Sans";
+  font-style: normal;
+  font-weight: 100;
+  src: url("/table/fonts/IBMPlexSans-Regular.ttf");
+}
 body {
   max-width: 1920px;
   min-height: 100vh;
 }
 .container {
+  font-family: "IBM Plex Sans";
   display: flex;
   border: 2px solid brown;
   align-items: center;
@@ -17,6 +24,7 @@ body {
   font-size: 1.5rem;
   color: brown;
   margin-top: 4rem;
+  margin-bottom: 1rem;
 }
 .container__form-content {
   display: flex;
@@ -24,14 +32,20 @@ body {
   justify-content: center;
   align-items: center;
   width: 30rem;
-  height: 20rem;
+  height: 25rem;
   background-color: rgb(66, 66, 66);
   color: white;
   border-radius: 5px;
 }
+.container__form-email {
+  display: block;
+  justify-content: center;
+  margin: 0 3rem 0 3rem;
+}
 .container__form-input {
   display: block;
   justify-content: center;
+  margin: 0 3rem 0 3rem;
 }
 .container__form-submit {
   display: block;
@@ -52,6 +66,7 @@ body {
   width: 100%;
   text-align: center;
   margin-top: 4rem;
+  margin-bottom: 1rem;
 }
 .container__table {
   width: 100%;

@@ -5,28 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Review table</title>
+    <link rel="stylesheet" href="./fonts/IBMPlexSans-Regular.ttf" />
     <link rel="stylesheet" href="./styles/styles.css" />
+    <script defer src="./js/input.js"></script>
     <script defer src="./js/table.js"></script>
   </head>
   <body>
     <div class="container">
-      <div class="container__form-heading">заполните форму отзыва</div>
-      <form class="container__form-content">
+      <!-- вводная форма -->
+      <div class="container__form-heading">Заполните форму отзыва</div>
+      <form id="inputForm" class="container__form-content">
         <input
+          id="inputedEmail"
+          class="container__form-email"
+          type="email"
+          required
+          placeholder="введите ваш e-mail"
+          name="inputed-email"
+        />
+        <input
+          id="inputedName"
           class="container__form-input"
           type="text"
           required
           placeholder="введите полное имя"
-          name="inputed text"
+          name="inputed-name"
         />
-
         <textarea
+          id="inputedText"
           class="container__form-textarea"
-          id="#"
           placeholder="введите сюда свой отзыв"
-          name="review"
+          name="inputed-review"
         ></textarea>
-
         <div class="container__form-checkbox">
           <input type="checkbox" id="checkbox" name="checkbox" />
           <label for="checkbox"
@@ -35,23 +45,28 @@
         </div>
         <button class="container__form-submit" type="submit">отправить</button>
       </form>
-      <div class="container__table-heading">отзывы</div>
+      <!-- таблица отзывов -->
+      <div class="container__table-heading">Отзывы</div>
       <table class="container__table">
         <colgroup>
-          <col style="width: 15%" />
-          <col style="width: 30%" />
-          <col style="width: 55%" />
+          <col style="width: 10%" />
+          <col style="width: 20%" />
+          <col style="width: 20%" />
+          <col style="width: 50%" />
         </colgroup>
         <thead class="container__table-head">
           <tr class="container__table-headtrow">
             <th>
-              <div>дата</div>
+              <div>Дата</div>
+            </th>
+            <th>
+              <div>Электронная почта</div>
             </th>
             <th>
               <div>Имя</div>
             </th>
             <th>
-              <div>содержимое</div>
+              <div>Содержимое</div>
             </th>
           </tr>
         </thead>
