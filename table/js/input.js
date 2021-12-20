@@ -1,32 +1,39 @@
-const inputForm = document.getElementById('#inputForm');
+const inputForm = document.getElementById("inputForm");
+const inputedEmail = document.querySelector(
+    "#inputForm input[name='inputed-email']"
+).parentNode;
+const inputedName = document.querySelector(
+    "#inputForm input[name='inputed-name']"
+).parentNode;
+const inputedReview = document.querySelector(
+    "#inputForm textarea[name='inputed-review']"
+).parentNode;
 
-// const inputedEmail = document.querySelector("#inputedEmail");
-// const inputedName = document.querySelector("#inputedName");
-// const inputedText = document.querySelector("#inputedText");
-// const inputedCheck = document.querySelector("#checkbox");
-
-const inputedEmail = document.querySelector("#inputForm input[name='inputed-email']").parentNode;
-const inputedName = document.querySelector("#inputForm input[name='inputed-name']").parentNode;
-const inputedReview = document.querySelector("#inputForm input[name='inputed-review']").parentNode;
-
-console.log(inputedEmail, inputedName);
-
-
-function initialazeForm(field){
-    const input = field.getElementByTagName("input")[0];
+function initialazeForm(field) {
+    const input = field.getElementsByTagName("input")[0];
     input.value = "";
+    return {
+        getValue() {
+            return input.value;
+        },
+    };
 }
 
-const emailField = initialazeForm (inputedEmail);
-const nameField = initialazeForm (inputedName);
-const reviewField = initialazeForm (inputedReview);
+const emailField = initialazeForm(inputedEmail);
+const nameField = initialazeForm(inputedName);
+const reviewField = initialazeForm(inputedReview);
 
-inputForm.addEventListener('submit', function (event){
+inputForm.addEventListener("submit", function (event) {
     event.preventDefault(); //перехватывает submit и форма срабатывает на ENTER
-    return{
-        getValue() {
-            return input.value
-        }
-    }
-    
+
+    const emailValue = emailField.getValue();
+    const nameValue = nameField.getValue();
+    const reviewValue = reviewField.getValue();
+
+    const data = {
+        name: nameValue,
+        email: emailValue,
+        review: reviewValue,
+    };
+    console.log(data.name, data.emailValue, data.reviewValue);
 });
