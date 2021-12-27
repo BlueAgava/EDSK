@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>input window</title>
+    <link rel="stylesheet" href="./fonts/IBMPlexSans-Regular.ttf" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <script defer src="./js/input.js"></script>
+  </head>
+  <body>
+    <div id="form" class="container">
+      <!-- вводная форма -->
+      <div class="container__form-heading">Заполните форму отзыва</div>
+      <form id="inputForm" class="container__form-content">
+        <input
+          id="inputedEmail"
+          class="container__form-email"
+          type="email"
+          required
+          placeholder="введите ваш e-mail"
+          name="inputed-email"
+        />
+        <input
+          id="inputedName"
+          class="container__form-input"
+          type="text"
+          required
+          placeholder="введите полное имя"
+          name="inputed-name"
+        />
+        <textarea
+          id="inputedText"
+          class="container__form-textarea"
+          placeholder="введите сюда свой отзыв"
+          name="inputed-review"
+        ></textarea>
+        <div class="container__form-checkbox">
+          <input type="checkbox" id="checkbox" name="checkbox" />
+          <label for="checkbox"
+            >Я согласен на обработку своих персональных данных</label
+          >
+        </div>
+        <button class="container__form-submit" type="submit">отправить</button>
+      </form>
+    </div>
+  </body>
+</html>

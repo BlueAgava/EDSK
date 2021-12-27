@@ -1,13 +1,12 @@
 const inputForm = document.getElementById("inputForm");
 const inputedEmail = document.querySelector(
-    "#inputForm input[name='inputed-email']"
-).parentNode;
+    "#inputForm input[name='inputed-email']").parentNode;
 const inputedName = document.querySelector(
-    "#inputForm input[name='inputed-name']"
-).parentNode;
+    "#inputForm input[name='inputed-name']").parentNode;
 const inputedReview = document.querySelector(
-    "#inputForm textarea[name='inputed-review']"
-).parentNode;
+    "#inputForm textarea[name='inputed-review']").parentNode;
+
+    console.log(inputedEmail, inputedName, inputedReview);
 
 function initialazeForm(field) {
     const input = field.getElementsByTagName("input")[0];
@@ -31,9 +30,9 @@ inputForm.addEventListener("submit", function (event) {
     const reviewValue = reviewField.getValue();
 
     const data = {
-        name: nameValue,
         email: emailValue,
+        name: nameValue,
         review: reviewValue,
     };
-    console.log(data.name, data.emailValue, data.reviewValue);
+    console.log(data.emailValue, data.name, data.reviewValue);
 });
